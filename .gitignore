@@ -1,0 +1,16 @@
+.coverage*
+.tox/
+bin/
+deb_dist
+htmlcov/
+lib/
+**/__pycache__
+python_magic.egg-info
+pip-selfcheck.json
+pyvenv.cfg
+*.pyc
+*~
+dist/
+.vscode/
+.venv/
+.idea/
