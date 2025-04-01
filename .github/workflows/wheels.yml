@@ -85,7 +85,7 @@ jobs:
       if: runner.os == 'Linux'
       uses: docker/setup-qemu-action@v3
 
-    - uses: pypa/cibuildwheel@v2.17.0  # sync version with pip install cibuildwheel above
+    - uses: pypa/cibuildwheel@v2.23.2  # sync version with pip install cibuildwheel above
       timeout-minutes: 10
       with:
         only: ${{ matrix.only }}
@@ -132,9 +132,9 @@ jobs:
       run: python -c "import magic; magic.Magic()"
 
     - name: Upload release assets
-      uses: softprops/action-gh-release@v0.1.15
+      uses: softprops/action-gh-release@v2.2.1
       with:
         files: dist/*
 
     - name: Publish package distributions to PyPI
-      uses: pypa/gh-action-pypi-publish@v1.8.14
+      uses: pypa/gh-action-pypi-publish@v1.12.4
